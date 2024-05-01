@@ -1,0 +1,13 @@
+/* create variables */
+:root {
+  --background-color: #161616;
+  --primary-color: blue;
+  --secondary-color: green;
+  accent-color: yellow;
+}
+
+html {
+  font-family: monospace;
+  background-color: var(--background-color);
+  color: white;
+}
