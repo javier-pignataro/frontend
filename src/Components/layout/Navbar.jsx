@@ -4,10 +4,8 @@ import './Navbar.css'
 const Navbar = () => {
     return (
         <nav>
-            <ul>
-                <a>Navbar</a>
-                <a>Navbar</a>
-            </ul>
+            <a>Logo</a>
+            <a>Home</a>
         </nav>
     )
 }
