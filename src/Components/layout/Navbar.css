@@ -1,4 +1,40 @@
 nav {
+    background-color: var(--navbar-color);
     display: flex;
-    justify-content: space-around;   
+    justify-content: space-between;
+    align-items: center;
+    /* make narbar stick to the top */
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+nav a {
+    font-size: 1.5rem;
+    color: var(--font-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+nav img {
+    padding-right: 10px;
+    width: 50px;
+}
+
+nav .navbar-buttons {
+    display: flex;
+}
+
+nav .navbar-buttons * {
+    padding: 0 10px;
+}
+
+nav .navbar-buttons button {
+    background-color: var(--primary-color);
+    color: var(--font-color);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
 }
