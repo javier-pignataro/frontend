@@ -1,0 +1,52 @@
+nav {
+    align-items: center;
+    background-color: $lighter-background-color;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: sticky;
+    top: 0;
+    width: auto;
+    /* make narbar stick to the top */
+}
+
+nav a {
+    align-items: center;
+    color: $font-color;
+    display: flex;
+    font-size: $font-size-4;
+    text-decoration: none;
+}
+
+nav img {
+    padding-right: 10px;
+    width: 50px;
+}
+
+nav .navbar__buttons {
+    display: flex;
+    height: 100%;
+}
+
+nav .navbar__buttons * {
+    padding: 0 10px;
+}
+
+nav .navbar__buttons button {
+    background-color: $lighter-background-color;
+    border: none;
+    color: $font-color;
+    cursor: pointer;
+    height: 100%;
+    min-width: 100px;
+    transition: background-color 100ms ease-in-out;
+    width: fit-content + 500px;
+    width: 6vw;
+}
+
+nav .navbar__buttons button:hover {
+    background-color: $secondary-color;
+    color: $font-color;
+}
+

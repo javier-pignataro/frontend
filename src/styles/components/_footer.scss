@@ -1,40 +1,40 @@
 footer {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
     align-items: center;
-    width: auto;
+    display: flex;
+    justify-content: space-between;
     padding: 0 20px;
+    width: auto;
+    width: 100%;
 }
 
-footer .footer-logo-div {
+footer .footer__logo__div {
     display: flex;
     flex-direction: column;
 }
 
-footer .footer-logo-div :nth-child(1) {
-    display: flex;
+footer .footer__logo__div :nth-child(1) {
     align-items: center;
+    display: flex;
 }
 
-footer .footer-logo-div img {
+footer .footer__logo__div img {
     width: 75px;
 }
 
 footer p {
-    padding-right: 12px;
+    font-size: $font-size-0;
     margin: 0;
-    font-size: 14px;
+    padding-right: 12px;
 }
 
 footer div {
     display: flex;
 }
 
-footer .footer-socials {
+footer .footer__socials {
     display: flex;
 }
 
-footer .footer-socials a {
+footer .footer__socials a {
     padding: 0 10px;
 }
