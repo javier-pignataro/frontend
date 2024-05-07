@@ -10,7 +10,7 @@ const Footer = () => {
                     <img src={ArrancArLogo} alt="ArrancAR Logo" />
                     <p>ArrancAR Argentina</p>
                 </div>
-                <p>Todos los derechos reservados.</p>
+                <p>2024 Todos los derechos reservados.</p>
             </div>
             <div className='footer-socials'>
                 <a href="">Twitter</a>

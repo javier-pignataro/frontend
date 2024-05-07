@@ -1,12 +1,14 @@
 nav {
-    background-color: var(--navbar-color);
+    background-color: var(--lighter-background-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     /* make narbar stick to the top */
     position: sticky;
     top: 0;
-    width: 100%;
+    width: auto;
+    height: 60px;
+    padding: 0 20px;
 }
 
 nav a {
@@ -23,6 +25,7 @@ nav img {
 }
 
 nav .navbar-buttons {
+    height: 100%;
     display: flex;
 }
 
@@ -31,10 +34,19 @@ nav .navbar-buttons * {
 }
 
 nav .navbar-buttons button {
-    background-color: var(--primary-color);
     color: var(--font-color);
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
     cursor: pointer;
+    height: 100%;
+    width: 6vw;
+    min-width: 100px;
+    border: none;
+    width: fit-content + 500px;
+    transition: background-color 100ms ease-in-out;
+    background-color: var(--lighter-background-color);
+
+}
+
+nav .navbar-buttons button:hover {
+    background-color: var(--secondary-color);
+    color: var(--font-color);
 }

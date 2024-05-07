@@ -3,6 +3,8 @@ footer {
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    width: auto;
+    padding: 0 20px;
 }
 
 footer .footer-logo-div {
@@ -26,7 +28,6 @@ footer p {
 }
 
 footer div {
-    /* padding: 10px; */
     display: flex;
 }
 

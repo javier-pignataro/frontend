@@ -1,7 +1,7 @@
 /* create variables */
 :root {
   --background-color: #0C0C0C;
-  --navbar-color: #333;
+  --lighter-background-color: #161616;
   --primary-color: #9B3922;
   --secondary-color: #481E14;
   --accent-color: #F2613F;
@@ -17,4 +17,8 @@ html {
 body {
   margin: 0;
   padding: 0;
+}
+
+a {
+  color: var(--accent-color);
 }
