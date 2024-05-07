@@ -6,7 +6,7 @@ import './styles/styles.scss'
 function App() {
   return (
     <div>
-    
+
       <BrowserRouter>
         <Routes>
           <Route element={<Layout />}>

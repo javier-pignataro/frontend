@@ -7,8 +7,6 @@ nav {
     padding: 0 20px;
     position: sticky;
     top: 0;
-    width: auto;
-    /* make narbar stick to the top */
 }
 
 nav a {
@@ -29,11 +27,9 @@ nav .navbar__buttons {
     height: 100%;
 }
 
-nav .navbar__buttons * {
-    padding: 0 10px;
-}
-
 nav .navbar__buttons button {
+    margin-left: 5px;
+    padding: 0 5px;
     background-color: $lighter-background-color;
     border: none;
     color: $font-color;
@@ -41,12 +37,12 @@ nav .navbar__buttons button {
     height: 100%;
     min-width: 100px;
     transition: background-color 100ms ease-in-out;
-    width: fit-content + 500px;
-    width: 6vw;
+    max-width: 150px;
+    height: 50px;
+    border-radius: 20px;
 }
 
 nav .navbar__buttons button:hover {
     background-color: $secondary-color;
     color: $font-color;
 }
-

@@ -1,6 +1,6 @@
 import React from 'react'
 import ArrancArLogo from '../../assets/logo.png'
- 
+
 const Footer = () => {
     return (
         <footer>
@@ -9,7 +9,7 @@ const Footer = () => {
                     <img src={ArrancArLogo} alt="ArrancAR Logo" />
                     <p>ArrancAR Argentina</p>
                 </div>
-                <p>2024 Todos los derechos reservados.</p>
+                <p>COPYRIGHT 2024<br></br>Todos los derechos reservados.</p>
             </div>
             <div className='footer__socials'>
                 <a href="">Twitter</a>
