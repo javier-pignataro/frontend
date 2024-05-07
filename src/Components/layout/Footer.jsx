@@ -1,5 +1,5 @@
 import React from 'react'
-import ArrancArLogo from '../../assets/logo.png'
+import ArrancArLogo from '../../assets/logo-dark-transparente.png'
 
 const Footer = () => {
     return (

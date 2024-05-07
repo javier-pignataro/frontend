@@ -1,11 +1,20 @@
 /*    -    COLOR    -    */
-$lighter-background-color: #161616;
-$lightblue: lightblue;
-$background-dark: #0C0C0C;
-$primary-color: #9B3922;
-$secondary-color: #481E14;
-$accent-color: #F2613F;
-$font-color: white;
+/*    -    LIGHTMODE    -    */
+$lightmode-background-color: #fcf8f8;
+$lightmode-background-color-darker: #dddada;
+$lightmode-text-color: #120908;
+$lightmode-primary-color: #c94c36;
+$lightmode-secondary-color: #ea9586;
+$lightmode-accent-color: #ed705a;
+
+/*    -    DARKMODE    -    */
+$darkmode-background-color: #111111;
+$darkmode-background-color-lighter: #161616;
+$darkmode-text-color: #ecddc7;
+$darkmode-primary-color: #c94c36;
+$darkmode-secondary-color: #792415;
+$darkmode-accent-color: #a52812;
+
 
 /*   -   FONTS & SIZES   -  */
 $font-family-1: "IBM Plex Sans", sans-serif;

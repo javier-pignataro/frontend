@@ -1,6 +1,6 @@
 nav {
     align-items: center;
-    background-color: $lighter-background-color;
+    background-color: $darkmode-background-color-lighter;
     display: flex;
     height: 60px;
     justify-content: space-between;
@@ -11,7 +11,7 @@ nav {
 
 nav a {
     align-items: center;
-    color: $font-color;
+    color: $darkmode-text-color;
     display: flex;
     font-size: $font-size-4;
     text-decoration: none;
@@ -28,21 +28,18 @@ nav .navbar__buttons {
 }
 
 nav .navbar__buttons button {
-    margin-left: 5px;
-    padding: 0 5px;
-    background-color: $lighter-background-color;
-    border: none;
-    color: $font-color;
-    cursor: pointer;
-    height: 100%;
-    min-width: 100px;
     transition: background-color 100ms ease-in-out;
-    max-width: 150px;
-    height: 50px;
-    border-radius: 20px;
+    background-color: $darkmode-background-color-lighter;
+    margin: 0 10px;
+    padding: 0 10px;
+    border: none;
+    color: $darkmode-text-color;
+    cursor: pointer;
+    height: 45px;
+    border-radius: 17px;
 }
 
 nav .navbar__buttons button:hover {
-    background-color: $secondary-color;
-    color: $font-color;
+    background-color: $darkmode-secondary-color;
+    color: $darkmode-text-color;
 }
