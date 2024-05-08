@@ -7,9 +7,11 @@ const Footer = () => {
             <div className='footer__logo__div'>
                 <div>
                     <img src={ArrancArLogo} alt="ArrancAR Logo" />
-                    <p>ArrancAR Argentina</p>
+                    {/* <p>ArrancAR Argentina</p> */}
                 </div>
-                <p>COPYRIGHT 2024<br></br>Todos los derechos reservados.</p>
+                <p>COPYRIGHT 2024</p>
+                {/* <br></br> */}
+                {/* Todos los derechos reservados. */}
             </div>
             <div className='footer__socials'>
                 <a href="">Twitter</a>

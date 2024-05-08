@@ -6,11 +6,11 @@
 }
 
 body {
-  // max-width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0;
-  background-color: $darkmode-background-color;
-  color: white;
+  background-color: rgba(247, 242, 242, 0.842);
+  color: $darkmode-background-color;
 }
 
 main {
