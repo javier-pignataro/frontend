@@ -1,12 +1,14 @@
 .container__home {
     display: flex;
-    flex-direction: row;
 
     .left__column {
+        background-image: url("https://cdn.discordapp.com/attachments/862374724154556426/1237934211671785522/rental-cars-image.png?ex=663d7393&is=663c2213&hm=26fde2d502dd3d8decb8314acbda5cb6e1451c51df0275ba37aaf62c1f8769c5&");
+        background-size: cover;
+        background-blend-mode: multiply;
         display: flex;
         flex-direction: column;
         width: 50%;
-        height: 80vh;
+        height: 96vh;
         justify-content: center;
         align-items: center;
 
@@ -24,8 +26,18 @@
             transition: background-color 100ms ease-in-out;
 
             &:hover {
-                background-color: $lightmode-accent-color
+                background-color: $lightmode-accent-color;
             }
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 30px;
+            border-radius: 50px;
         }
     }
 
@@ -46,11 +58,11 @@
 
             .car__card {
                 color: $lightmode-text-color;
-                margin: 20px 0;
+                margin: 10px;
                 padding: 10px;
                 border-radius: 20px;
                 background-color: #c7c7c7;
-                width: 450px;
+                width: 20vw;
                 max-height: 265px;
                 overflow: hidden;
                 text-overflow: ellipsis;

@@ -26,10 +26,12 @@ const Home = () => {
   return (
     <div className='container__home'>
       <div className='left__column'>
-        <h1><img src={ArrancARLogo} alt="" /></h1>
-        <h1>Bienvenido a ArrancAR!</h1>
-        <h3>{"<"}un lema corto{">"}</h3>
-        <button>Ver todos los autos 🔎</button>
+        <div className='info'>
+          <h1><img src={ArrancARLogo} alt="" /></h1>
+          <h1>Bienvenido a ArrancAR!</h1>
+          <h3>{"<"}un lema corto{">"}</h3>
+          <button>Ver todos los autos 🔎</button>
+        </div>
       </div>
       <div className='right__column'>
         <h3>Estos son algunos de nuestros autos listos para alquilar:</h3>
