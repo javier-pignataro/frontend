@@ -1,9 +1,16 @@
 .container__home {
+    margin-top: 40px;
+    h4, p{
+        font-family: $font-family;
+        color: wheat;
+    }
     .container__cars__showcase {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         margin-top: 20px;
+        width: 1050px;
+        margin: 0 auto;
     }
 
     .car__card {
@@ -11,18 +18,28 @@
         margin: 20px 0;
         padding: 10px;
         border-radius: 20px;
-        background-color: #c7c7c7;
-        width: 500px;
+        background-color: #C94C36;
+        width: 450px;
         max-height: 300px;
         overflow: hidden;
         text-overflow: ellipsis;
+        display: flex;
+        flex-direction: wrap;
 
         img {
-            border-radius: 10px;
-            width: 100%;
-            //crop image without it warping
-            height: 200px;
+             border-radius: 5px;
+            width: 50%;
+            height: 170px;
             object-fit: cover;
+            padding: 13px;
         }
+    }
+    .card__detail{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto; 
+        justify-content: center;
+        gap: 16px;
+        align-items: center;
     }
 }
