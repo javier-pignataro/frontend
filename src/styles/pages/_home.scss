@@ -1,28 +1,73 @@
 .container__home {
-    .container__cars__showcase {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin-top: 20px;
-    }
+    display: flex;
+    flex-direction: row;
 
-    .car__card {
-        color: $lightmode-text-color;
-        margin: 20px 0;
-        padding: 10px;
-        border-radius: 20px;
-        background-color: #c7c7c7;
-        width: 500px;
-        max-height: 300px;
-        overflow: hidden;
-        text-overflow: ellipsis;
+    .left__column {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        height: 80vh;
+        justify-content: center;
+        align-items: center;
 
         img {
-            border-radius: 10px;
-            width: 100%;
-            //crop image without it warping
-            height: 200px;
-            object-fit: cover;
+            width: 350px;
+        }
+
+        button {
+            font-size: larger;
+            background-color: $lightmode-secondary-color;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background-color 100ms ease-in-out;
+
+            &:hover {
+                background-color: $lightmode-accent-color
+            }
+        }
+    }
+
+    .right__column {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+
+        h3 {
+            padding: 0 auto;
+        }
+
+        .container__cars__showcase {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin-top: 20px;
+
+            .car__card {
+                color: $lightmode-text-color;
+                margin: 20px 0;
+                padding: 10px;
+                border-radius: 20px;
+                background-color: #c7c7c7;
+                width: 450px;
+                max-height: 265px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                transition: background-color 100ms ease-in-out;
+
+                &:hover {
+                    background-color: #818181
+                }
+
+                img {
+                    border-radius: 10px;
+                    width: 100%;
+                    //crop image without it warping
+                    height: 200px;
+                    object-fit: cover;
+                }
+            }
         }
     }
 }
