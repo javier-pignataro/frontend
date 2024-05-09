@@ -1,6 +1,6 @@
 nav {
   align-items: center;
-  background-color: $lightmode-background-header;
+  background-color: $lightmode-backgroud-grey;
   display: flex;
   height: 60px;
   justify-content: space-between;
@@ -10,18 +10,21 @@ nav {
 
   a {
     align-items: center;
-    color: $lightmode-text-color;
+    color: $darkmode-text-color;
     display: flex;
     font-size: $font-size-4;
     text-decoration: none;
   }
+
   img {
     padding-right: 10px;
     width: 50px;
   }
+
   .navbar__buttons {
     display: flex;
     height: 100%;
+
     button {
       transition: background-color 100ms ease-in-out;
       background-color: $darkmode-background-color-lighter;
@@ -30,9 +33,6 @@ nav {
       border: none;
       color: $darkmode-text-color;
       cursor: pointer;
-      font-size: 14px;
-      height: 38px;
-      border-radius: 10px;
       height: 45px;
       border-radius: 17px;
 
@@ -42,22 +42,4 @@ nav {
       }
     }
   }
-}
-@media (max-width: 769px) {
-  nav {
-    background-color: rgb(235, 225, 225);
-  }    
-  nav .navbar__buttons button {
-    height: 35px;
-    font-size: 12px;
-    background-color: $lightmode-accent-color;
-    border-radius: 25px;
-    color: whitesmoke;
-  }
-}
-@media (max-width: 480px) {
-    nav {
-      justify-content: space-between;
-    }
-
 }
