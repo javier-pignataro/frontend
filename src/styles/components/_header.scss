@@ -15,16 +15,13 @@ nav {
     font-size: $font-size-4;
     text-decoration: none;
   }
-
   img {
     padding-right: 10px;
     width: 50px;
   }
-
   .navbar__buttons {
     display: flex;
     height: 100%;
-
     button {
       transition: background-color 100ms ease-in-out;
       background-color: $darkmode-background-color-lighter;
@@ -36,6 +33,9 @@ nav {
       font-size: 14px;
       height: 38px;
       border-radius: 10px;
+      height: 45px;
+      border-radius: 17px;
+
       &:hover {
         background-color: $darkmode-secondary-color;
         color: $darkmode-text-color;
