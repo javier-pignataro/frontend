@@ -1,7 +1,28 @@
-.container__home{
-    height: 550px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+.container__home {
+    .container__cars__showcase {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .car__card {
+        color: $lightmode-text-color;
+        margin: 20px 0;
+        padding: 10px;
+        border-radius: 20px;
+        background-color: #c7c7c7;
+        width: 500px;
+        max-height: 300px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        img {
+            border-radius: 10px;
+            width: 100%;
+            //crop image without it warping
+            height: 200px;
+            object-fit: cover;
+        }
+    }
 }
