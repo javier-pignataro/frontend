@@ -7,7 +7,7 @@
         background-blend-mode: multiply;
         display: flex;
         flex-direction: column;
-        width: 50%;
+        width: 33%;
         height: 96vh;
         justify-content: center;
         align-items: center;
@@ -44,7 +44,7 @@
     .right__column {
         display: flex;
         flex-direction: column;
-        width: 50%;
+        width: 67%;
 
         h3 {
             padding: 0 auto;
@@ -57,24 +57,37 @@
             margin-top: 20px;
 
             .car__card {
+                // border: solid 3px $lightmode-accent-color;
+                box-shadow: 0 0 30px 0 $lightmode-secondary-color;
+                display: flex;
                 color: $lightmode-text-color;
+                width: 25vw;
                 margin: 10px;
                 padding: 10px;
                 border-radius: 20px;
-                background-color: #c7c7c7;
-                width: 20vw;
+                background-color: $lightmode-primary-color;
                 max-height: 265px;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 transition: background-color 100ms ease-in-out;
 
+                .card__car__information {
+                    font-size: larger;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: end;
+                    width: 40%;
+                    text-wrap: stable
+                }
+
                 &:hover {
-                    background-color: #818181
+                    background-color: $lightmode-accent-color
                 }
 
                 img {
                     border-radius: 10px;
-                    width: 100%;
+                    width: 60%;
                     //crop image without it warping
                     height: 200px;
                     object-fit: cover;
