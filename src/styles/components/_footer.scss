@@ -1,7 +1,7 @@
 footer {
   align-items: center;
-  background-color: $lightmode-backgroud-grey;
-  color: $lightmode-background-color-darker;
+  background: $darkmode-background-color-lighter;
+  color: $darkmode-text-color;
   display: flex;
   height: 90px;
   justify-content: space-between;
@@ -21,7 +21,7 @@ footer {
 
     img {
       margin: 0 10px 0 0;
-      width: 50px;
+      width: 65px;
     }
   }
 

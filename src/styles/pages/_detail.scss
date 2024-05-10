@@ -1,7 +1,38 @@
-.selected__car__detail__container {
-    img {
-        height: 500px;
-        width: 850px;
-        object-fit: cover;
+.detail__container {
+    /* control the size */
+    --s: 400px;
+
+    --c1: #1d1d1d;
+    --c2: #3d3e3f;
+    --c3: #302f2f;
+
+    background: repeating-conic-gradient(from 30deg,
+            #0000 0 120deg,
+            var(--c3) 0 180deg) calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+        repeating-conic-gradient(from 30deg,
+            var(--c1) 0 60deg,
+            var(--c2) 0 120deg,
+            var(--c3) 0 180deg);
+    background-size: var(--s) calc(var(--s) * 0.577);
+
+    .imagen__y__detalles__container {
+        display: flex;
+        align-items: center;
+
+        .detalles__del__motor {
+            margin: 0 0 0 100px;
+        }
+    }
+
+    .selected__car__detail__container {
+
+        padding: 30px;
+
+        img {
+            border-radius: 20px;
+            height: 500px;
+            width: 850px;
+            object-fit: cover;
+        }
     }
 }

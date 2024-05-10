@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 
 import Card from '../Components/Card'
 
+import ArrancARLogo from '../assets/logo-light-transparente.png'
+
 import carsJson from '../cars.json'
 import { Link } from 'react-router-dom'
 
@@ -23,17 +25,27 @@ const Home = () => {
 
   return (
     <div className='container__home'>
-      <h1>Hogar</h1>
-      <h2>Bienvenido a ArrancAR!</h2>
-      <h3>Estos son algunos de nuestros autos listos para alquilar:</h3>
-      <div className='container__cars__showcase'>
-        {
-          getRandomCars().map(car => {
-            return (
-              <Card car={car} className='car__card'></Card>
-            )
-          })
-        }
+      <div className='left__column'>
+        <div className='info'>
+          <h1><img src={ArrancARLogo} alt="" /></h1>
+          <h1>Bienvenido a ArrancAR!</h1>
+          <h3>Donde cada viaje empieza.</h3>
+          <button>Ver todos los autos 🔎</button>
+        </div>
+      </div>
+      <div className='right__column'>
+        <div className="container">
+          <h3>Estos son algunos de nuestros autos listos para alquilar:</h3>
+          <div className='container__cars__showcase'>
+            {
+              getRandomCars().map(car => {
+                return (
+                  <Card car={car} className='car__card' />
+                )
+              })
+            }
+          </div>
+        </div>
       </div>
     </div>
   )
