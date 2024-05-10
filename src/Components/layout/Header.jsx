@@ -1,13 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../../assets/logo-dark-transparente.png'
-import logoLight from '../../assets/logo-light-transparente.png'
-
+import logoConTitulo from '../../assets/ArrancAR logo con titulo sin fondo.png'
 
 const Header = () => {
     return (
         <nav>
-            <Link to='/'><img src={logoLight}></img> Arranc<span className='arrancar__ar'>AR</span></Link>
+            <Link to='/'><img src={logoConTitulo} /></Link>
             <div class="search">
                 <input placeholder="Buscar autos..." type="text"></input>
                 <button type="submit">Buscar 🔎</button>
