@@ -1,38 +1,91 @@
 .detail__container {
-    /* control the size */
-    --s: 400px;
+  /* control the size */
+  --s: 400px;
 
-    --c1: #1d1d1d;
-    --c2: #3d3e3f;
-    --c3: #302f2f;
+  --c1: #1d1d1d;
+  --c2: #3d3e3f;
+  --c3: #302f2f;
 
-    background: repeating-conic-gradient(from 30deg,
-            #0000 0 120deg,
-            var(--c3) 0 180deg) calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
-        repeating-conic-gradient(from 30deg,
-            var(--c1) 0 60deg,
-            var(--c2) 0 120deg,
-            var(--c3) 0 180deg);
-    background-size: var(--s) calc(var(--s) * 0.577);
+  background: repeating-conic-gradient(
+        from 30deg,
+        #0000 0 120deg,
+        var(--c3) 0 180deg
+      )
+      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+    repeating-conic-gradient(
+      from 30deg,
+      var(--c1) 0 60deg,
+      var(--c2) 0 120deg,
+      var(--c3) 0 180deg
+    );
+  background-size: var(--s) calc(var(--s) * 0.577);
 
-    .imagen__y__detalles__container {
-        display: flex;
-        align-items: center;
+  .imagen__y__detalles__container {
+    display: flex;
+    align-items: center;
 
-        .detalles__del__motor {
-            margin: 0 0 0 100px;
-        }
+    .detalles__del__motor {
+      margin: 0 0 0 100px;
     }
+  }
 
-    .selected__car__detail__container {
+  .selected__car__detail__container {
+    padding: 30px;
 
-        padding: 30px;
-
-        img {
-            border-radius: 20px;
-            height: 500px;
-            width: 850px;
-            object-fit: cover;
-        }
+    img {
+      border-radius: 20px;
+      height: 500px;
+      width: 850px;
+      object-fit: cover;
     }
+  }
+}
+
+@media (max-width: 769px) {
+  .detail__container {
+    padding: 14px;
+  }
+
+  .detail__container .selected__car__detail__container img {
+    height: 300px;
+    width: 400px;
+  }
+  .detail__container .imagen__y__detalles__container .detalles__del__motor {
+    margin: 0 0 0 30px;
+    letter-spacing: 1.3px;
+    font-size: 14px;
+  }
+}
+.informacion__basica {
+  padding: 10px 15px;
+}
+
+.informacion__basica p {
+  padding: 10px 0px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.link__imagenes {
+  padding: 0;
+  text-decoration: underline;
+  color: #ed705a;
+}
+
+@media (max-width: 480px) {
+  .detail__container .selected__car__detail__container img {
+    height: 160px;
+    width: 240px;
+  }
+
+  .detail__container .selected__car__detail__container {
+    padding: 10px;
+  }
+  .detail__container .imagen__y__detalles__container .detalles__del__motor {
+    margin: 0 0 0 10px;
+    font-size: 12px;
+  }
+  .informacion__basica p {
+    font-size: 13px;
+  }
 }

@@ -36,9 +36,9 @@ const Detail = () => {
                 </div>
                 <div className="informacion__basica">
                     <h3>{car.brand} {car.model}</h3>
-                    <p>Click <Link to={`/cars/${car.id}/images`}>aquí</Link> para ver mas imágenes.</p>
-                    <br />
                     <p>{car.description}</p>
+                    <br />
+                    <p >Click <Link to={`/cars/${car.id}/images`}>aquí</Link> para ver mas imágenes.</p>
                     <br />
                 </div>
             </div>

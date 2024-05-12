@@ -60,35 +60,34 @@ footer {
 }
 
 @media (max-width: 769px) {
-  
   footer .footer__socials a img {
     width: 28px;
-}
-a {
-  text-decoration: none;
-  color: #f5efee;
-  font-size: 13.5px;
-}
-footer p {
-  font-size: 11px;
-
-}
-footer .footer__logo__div img {
-  margin: 0 10px 0 0;
-  width: 35px;
-}
+  }
+  a {
+    text-decoration: none;
+    // color: #f5efee;
+    font-size: 13.5px;
+  }
+  footer p {
+    font-size: 11px;
+  }
+  footer .footer__logo__div img {
+    margin: 0 10px 0 0;
+    width: 35px;
+  }
 }
 @media (max-width: 480px) {
   footer .footer__socials a img {
     width: 20px;
-}
-footer .footer__links__div, footer .footer__logo__div {
- flex-direction: column;
-}
-footer .footer__links__div a {
-  padding-top: 4px;
-}
-footer p {
-  font-size: 10px;
-}
+  }
+  footer .footer__links__div,
+  footer .footer__logo__div {
+    flex-direction: column;
+  }
+  footer .footer__links__div a {
+    padding-top: 4px;
+  }
+  footer p {
+    font-size: 10px;
+  }
 }

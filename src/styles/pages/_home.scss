@@ -1,89 +1,81 @@
 .container__home {
+  display: flex;
+
+  .left__column {
+    background-image: url("https://cdn.discordapp.com/attachments/862374724154556426/1237934211671785522/rental-cars-image.png?ex=663d7393&is=663c2213&hm=26fde2d502dd3d8decb8314acbda5cb6e1451c51df0275ba37aaf62c1f8769c5&");
+    // opacity: 20%;
+    background-size: cover;
+    background-blend-mode: multiply;
     display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 96vh;
+    justify-content: center;
+    align-items: center;
 
-    .left__column {
-        background-image: url("https://cdn.discordapp.com/attachments/862374724154556426/1237934211671785522/rental-cars-image.png?ex=663d7393&is=663c2213&hm=26fde2d502dd3d8decb8314acbda5cb6e1451c51df0275ba37aaf62c1f8769c5&");
-        // opacity: 20%;
-        background-size: cover;
-        background-blend-mode: multiply;
-        display: flex;
-        flex-direction: column;
-        width: 30%;
-        height: 96vh;
-        justify-content: center;
-        align-items: center;
+    .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(255, 255, 255, 0.705);
+      color: black;
+      padding: 30px;
+      border-radius: 50px;
 
+      img {
+        width: 350px;
+      }
 
-        .info {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(255, 255, 255, 0.705);
-            color: black;
-            padding: 30px;
-            border-radius: 50px;
+      button {
+        font-size: larger;
+        background-color: $darkmode-primary-color;
+        padding: 10px 20px;
+        margin-top: 20px;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: background-color 100ms ease-in-out;
 
-            img {
-                width: 350px;
-            }
-
-            button {
-                font-size: larger;
-                background-color: $darkmode-primary-color;
-                padding: 10px 20px;
-                margin-top: 20px;
-                border-radius: 15px;
-                cursor: pointer;
-                transition: background-color 100ms ease-in-out;
-
-                &:hover {
-                    background-color: $darkmode-accent-color;
-                }
-            }
+        &:hover {
+          background-color: $darkmode-accent-color;
         }
+      }
+    }
+  }
+
+  .right__column {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+
+    h3 {
+      padding: 0 auto;
     }
 
-    .right__column {
-        display: flex;
-        flex-direction: column;
-        width: 70%;
-
-        h3 {
-            padding: 0 auto;
-        }
-
-        .container__cars__showcase {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
-            margin-top: 20px;
-        }
+    .container__cars__showcase {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin-top: 20px;
     }
+  }
 }
 @media (max-width: 769px) {
-
-    .container__home .left__column  {
-
-        display: none;
-    }
-
-    .container__home .right__column {
-
-     width: 100%;
-    }
-
-    .container__home .right__column h3 {
-        margin: 15px auto;
-        display: flex;
-        justify-content: center;
-        font-size: 18px;
-        padding-bottom: 12px;
-    }
-
-
+  .container__home .left__column {
+    display: none;
   }
-  @media (max-width: 480px) {
 
-  
+  .container__home .right__column {
+    width: 100%;
   }
+
+  .container__home .right__column h3 {
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    padding-bottom: 12px;
+  }
+}
+@media (max-width: 480px) {
+}

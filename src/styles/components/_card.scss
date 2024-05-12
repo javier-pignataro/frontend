@@ -1,83 +1,76 @@
 .car__card {
-    /* control the size */
-    --s: 50px;
+  /* control the size */
+  --s: 50px;
+
+  --c1: #1d1d1d;
+  --c2: #3d3e3f;
+  --c3: #302f2f;
+
+  background: repeating-conic-gradient(
+        from 30deg,
+        #0000 0 120deg,
+        var(--c3) 0 180deg
+      )
+      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+    repeating-conic-gradient(
+      from 30deg,
+      var(--c1) 0 60deg,
+      var(--c2) 0 120deg,
+      var(--c3) 0 180deg
+    );
+  background-size: var(--s) calc(var(--s) * 0.577);
+
+  box-shadow: 0 0 30px 0 $darkmode-primary-color;
+  // box-shadow: 11px -10px 0px -7px $darkmode-primary-color;
+  display: flex;
+  color: white;
+  width: 25vw;
+  margin: 2.5vh 1vw;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: white;
+  max-height: 265px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: transform 100ms ease-in-out;
+
+  .card__car__information {
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    width: 40%;
+    text-wrap: stable;
+  }
+
+  img {
+    border-radius: 10px;
+    width: 60%;
+    box-shadow: 0 0 30px 0 black;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  &:hover {
+    transform: scale(1.03);
 
     --c1: #1d1d1d;
-    --c2: #3d3e3f;
+    --c2: #6e7072;
     --c3: #302f2f;
-
-    background: repeating-conic-gradient(from 30deg,
-            #0000 0 120deg,
-            var(--c3) 0 180deg) calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
-        repeating-conic-gradient(from 30deg,
-            var(--c1) 0 60deg,
-            var(--c2) 0 120deg,
-            var(--c3) 0 180deg);
-    background-size: var(--s) calc(var(--s) * 0.577);
-
-    box-shadow: 0 0 30px 0 $darkmode-primary-color;
-    // box-shadow: 11px -10px 0px -7px $darkmode-primary-color;
-    display: flex;
-    color: white;
-    width: 25vw;
-    margin: 2.5vh 1vw;
-    padding: 10px;
-    border-radius: 20px;
-    background-color: white;
-    max-height: 265px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    transition: transform 100ms ease-in-out;
-
-    .card__car__information {
-        font-size: larger;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: end;
-        width: 40%;
-        text-wrap: stable
-    }
-
-    img {
-        border-radius: 10px;
-        width: 60%;
-        box-shadow: 0 0 30px 0 black;
-        height: 200px;
-        object-fit: cover;
-    }
-
-    &:hover {
-        transform: scale(1.03);
-
-        --c1: #1d1d1d;
-        --c2: #6e7072;
-        --c3: #302f2f;
-    }
+  }
 }
 
 @media (max-width: 769px) {
-  
-    .car__card img {
-        width: 55%;
-        height: 150px;
-     }
-
-     .car__card {
- 
-        padding: 0px;
-        width: 350px;
-   
-    }
-
-
-
-
-
-  }
-  @media (max-width: 480px) {
-
+  .car__card img {
+    width: 55%;
+    height: 150px;
   }
 
-
-
+  .car__card {
+    padding: 0px;
+    width: 350px;
+  }
+}
+@media (max-width: 480px) {
+}
