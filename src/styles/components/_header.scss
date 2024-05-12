@@ -86,3 +86,32 @@ nav {
     }
   }
 }
+@media (max-width: 769px) {
+  
+  nav .navbar__buttons button, nav img {
+     display: none;
+  }
+  nav .search input[type=text] {
+    width: 460px;
+    height: 40px;
+    border: 1px solid black;
+    
+ }
+ nav .search button[type=submit] {
+  height: 40px;
+  font-size: 12px;
+ }
+}
+@media (max-width: 480px) {
+  nav .search input[type=text] {
+    width: 300px;
+    height: 38px;
+
+    
+ }
+ nav .search button[type=submit] {
+  height: 38px;
+  font-size: 11px;
+ }
+
+}
