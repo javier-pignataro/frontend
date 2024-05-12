@@ -15,7 +15,7 @@ const ImageLibrary = () => {
 
     return (
         <>
-            <Link to={`/cars/${car.id}`}><h3>Volver</h3></Link>
+            <Link to={`/cars/${car.id}`}><h3 className='link__volver'>Volver</h3></Link>
             <div className='image__library__container'>
                 {car.images.map(image => {
                     return (

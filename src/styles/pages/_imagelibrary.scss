@@ -1,13 +1,23 @@
 .image__library__container {
-    padding: 30px;
-    display: flex;
-    flex-wrap: wrap;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
 
-    img {
+  img {
+    width: 500px;
+    height: 350px;
+    object-fit: cover;
+  }
+}
 
-        width: 500px;
-        height: 350px;
-        object-fit: cover;
-
-    }
+@media (max-width: 769px) {
+  .link__volver {
+    padding: 16px;
+  }
+  .image__library__container img {
+    width: 160px;
+    height: 240px;
+    padding: 10px;
+    margin: 0 auto;
+  }
 }
