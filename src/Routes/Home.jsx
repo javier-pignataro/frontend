@@ -35,7 +35,7 @@ const Home = () => {
       </div>
       <div className='right__column'>
         <div className="container">
-          <h3>Estos son algunos de nuestros autos listos para alquilar:</h3>
+          <h3>Estos son algunos de nuestros autos para alquilar:</h3>
           <div className='container__cars__showcase'>
             {
               getRandomCars().map(car => {

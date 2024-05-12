@@ -61,3 +61,29 @@
         }
     }
 }
+@media (max-width: 769px) {
+
+    .container__home .left__column  {
+
+        display: none;
+    }
+
+    .container__home .right__column {
+
+     width: 100%;
+    }
+
+    .container__home .right__column h3 {
+        margin: 15px auto;
+        display: flex;
+        justify-content: center;
+        font-size: 18px;
+        padding-bottom: 12px;
+    }
+
+
+  }
+  @media (max-width: 480px) {
+
+  
+  }

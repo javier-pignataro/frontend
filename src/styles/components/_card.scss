@@ -55,3 +55,29 @@
         --c3: #302f2f;
     }
 }
+
+@media (max-width: 769px) {
+  
+    .car__card img {
+        width: 55%;
+        height: 150px;
+     }
+
+     .car__card {
+ 
+        padding: 0px;
+        width: 350px;
+   
+    }
+
+
+
+
+
+  }
+  @media (max-width: 480px) {
+
+  }
+
+
+
