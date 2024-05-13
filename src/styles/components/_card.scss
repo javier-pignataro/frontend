@@ -21,8 +21,6 @@
     padding: 7px;
     border-radius: 17px;
     max-height: 265px;
-    overflow: hidden;
-    text-overflow: ellipsis;
     transition: transform 100ms ease-in-out;
     box-shadow: 0 0 30px 0 $darkmode-primary-color;
 
@@ -50,5 +48,22 @@
         --c1: #1d1d1d;
         --c2: #6e7072;
         --c3: #302f2f;
+    }
+}
+
+@media (max-width: 750px) {
+    .car__card {
+        flex-direction: column;
+        max-height: 350px;
+        height: 400px;
+
+        img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .card__car__information {
+            width: 100%;
+        }
     }
 }

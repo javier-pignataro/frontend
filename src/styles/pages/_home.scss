@@ -126,10 +126,11 @@
             .info {
                 font-size: 14px;
                 height: 50vh;
+                overflow: hidden;
 
                 img {
-                    width: 200px;
-                    height: 200px;
+                    height: 25vh;
+                    width: 25vh;
                 }
 
                 padding-bottom: 50px;
