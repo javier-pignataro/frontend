@@ -1,4 +1,6 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+
+import axios from 'axios'
 
 import Card from '../Components/Card'
 
@@ -22,6 +24,19 @@ const Home = () => {
 
     return result
   }
+
+  const [cars, setCars] = useState([]);
+
+  function fetchCars() {
+    axios.get('http://localhost:8080/vehicle/all').then(res => {
+      console.log(res.json());
+    })
+  }
+
+  useEffect(() => {
+    fetchCars()
+    console.log(cars)
+  }, [])
 
   const onClickButton = () => {
     const input = document.querySelector('input')
