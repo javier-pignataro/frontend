@@ -8,7 +8,7 @@ nav {
   padding: 0 20px;
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 1; // Para que el header esté por encima de todo. el numero puede ser mayor si se necesita
 
   a {
     align-items: center;
@@ -41,47 +41,6 @@ nav {
       &:hover {
         background-color: $darkmode-secondary-color;
         color: $darkmode-text-color;
-      }
-    }
-  }
-
-  .arrancar__ar {
-    color: $lightmode-accent-color;
-  }
-
-  .search {
-    position: relative;
-
-    input[type="text"] {
-      width: 500px;
-      height: 50px;
-      padding: 10px;
-      border: none;
-      border-radius: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-      &:focus {
-        outline: none;
-      }
-    }
-
-    button[type="submit"] {
-      background-color: $darkmode-secondary-color;
-      height: 50px;
-      border: none;
-      color: #fff;
-      cursor: pointer;
-      padding: 10px 20px;
-      border-radius: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      position: absolute;
-      right: 0;
-      transition: .25s ease-in-out;
-
-      &:hover {
-        transform: scale(1.2);
-        color: rgb(255, 255, 255);
-        background-color: $darkmode-primary-color;
       }
     }
   }

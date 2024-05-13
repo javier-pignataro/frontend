@@ -37,24 +37,21 @@ footer {
 
   .footer__links__div {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
 
     a {
-      padding: 0 10px;
+      padding: 5px 10px;
     }
   }
 
   .footer__socials {
     display: flex;
 
-    a {
-      padding: 0 10px;
-
-      img {
-        width: 40px;
-      }
+    img {
+      max-width: 40px;
+      width: 5vw;
     }
   }
 }

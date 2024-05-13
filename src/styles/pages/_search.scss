@@ -1,0 +1,13 @@
+.search__container {
+
+    .search__results {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .car__card {
+        width: 500px;
+    }
+
+}

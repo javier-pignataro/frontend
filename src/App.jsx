@@ -6,6 +6,7 @@ import About from "./Routes/About";
 import Legal from "./Routes/Legal";
 import Detail from "./Routes/Detail";
 import ImageGallery from "./Routes/ImageLibrary"
+import Search from "./Routes/Search"
 
 import './styles/styles.scss'
 
@@ -20,6 +21,7 @@ function App() {
             <Route path="/legal" element={<Legal />}></Route>
             <Route path="/cars/:id" element={<Detail />}></Route>
             <Route path="/cars/:id/images" element={<ImageGallery />}></Route>
+            <Route path="/search/:search?" element={<Search />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>

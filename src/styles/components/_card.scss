@@ -15,28 +15,23 @@
             var(--c3) 0 180deg);
     background-size: var(--s) calc(var(--s) * 0.577);
 
-    box-shadow: 0 0 30px 0 $darkmode-primary-color;
-    // box-shadow: 11px -10px 0px -7px $darkmode-primary-color;
     display: flex;
     color: white;
-    width: 25vw;
     margin: 2.5vh 1vw;
-    padding: 10px;
-    border-radius: 20px;
-    background-color: white;
+    padding: 7px;
+    border-radius: 17px;
     max-height: 265px;
-    overflow: hidden;
-    text-overflow: ellipsis;
     transition: transform 100ms ease-in-out;
+    box-shadow: 0 0 30px 0 $darkmode-primary-color;
 
     .card__car__information {
-        font-size: larger;
         display: flex;
+        font-size: larger;
         flex-direction: column;
         justify-content: center;
+        text-align: right;
         align-items: end;
         width: 40%;
-        text-wrap: stable
     }
 
     img {
@@ -53,5 +48,22 @@
         --c1: #1d1d1d;
         --c2: #6e7072;
         --c3: #302f2f;
+    }
+}
+
+@media (max-width: 750px) {
+    .car__card {
+        flex-direction: column;
+        max-height: 350px;
+        height: 400px;
+
+        img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .card__car__information {
+            width: 100%;
+        }
     }
 }

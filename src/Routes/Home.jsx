@@ -23,28 +23,39 @@ const Home = () => {
     return result
   }
 
+  const onClickButton = () => {
+    const input = document.querySelector('input')
+    const text = input.value
+    console.log(text)
+    // take user to /search/"text"
+    window.location.href = `/search/${text}`
+  }
+
   return (
     <div className='container__home'>
       <div className='left__column'>
         <div className='info'>
-          <h1><img src={ArrancARLogo} alt="" /></h1>
-          <h1>Bienvenido a ArrancAR!</h1>
+          <img src={ArrancARLogo} alt="" />
+          <h1>Bienvenido a Arranc<span className='span__primary__color'>AR</span>!</h1>
           <h3>Donde cada viaje empieza.</h3>
-          <button>Ver todos los autos 🔎</button>
+          <Link to="/search/">
+            <button>Ver todos los autos 🔎</button>
+          </Link>
         </div>
       </div>
       <div className='right__column'>
-        <div className="container">
-          <h3>Estos son algunos de nuestros autos listos para alquilar:</h3>
-          <div className='container__cars__showcase'>
-            {
-              getRandomCars().map(car => {
-                return (
-                  <Card car={car} className='car__card' />
-                )
-              })
-            }
-          </div>
+        <div className="search">
+          <input placeholder="Buscar autos..." type="text"></input>
+          <button type="submit" onClick={onClickButton}>Buscar 🔎</button>
+        </div>
+        <div className='container__cars__showcase'>
+          {
+            getRandomCars().map(car => {
+              return (
+                <Card car={car} key={car.id} className='car__card' />
+              )
+            })
+          }
         </div>
       </div>
     </div>
