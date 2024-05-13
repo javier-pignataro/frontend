@@ -19,19 +19,21 @@ const Detail = () => {
 
     return (
         <div className="detail__container">
-            <h2>Car Selected:</h2>
+            <h2>Vehículo seleccionado:</h2>
             <div className='selected__car__detail__container'>
                 <div className='imagen__y__detalles__container'>
                     <img src={car.images[0]} />
                     <div className='detalles__del__motor'>
                         <h4>Detalles del motor:</h4>
-                        <p>Motor: {car.specs.engine}</p>
-                        <p>Caballos de fuerza: {car.specs.horsepower}hp</p>
-                        <p>Torque: {car.specs.torque}Nm</p>
-                        <p>0-100kmh: {car.specs.zerotosixty}s</p>
-                        <p>Velocidad máxima: {car.specs.topSpeed}mph</p>
-                        <p>Transmisión: {car.specs.transmission}</p>
-                        <p>Tren de transmisión: {car.specs.drivetrain}</p>
+                        <ul>
+                            <li>Motor: {car.specs.engine}</li>
+                            <li>Caballos de fuerza: {car.specs.horsepower}hp</li>
+                            <li>Torque: {car.specs.torque}Nm</li>
+                            <li>0-100kmh: {car.specs.zerotosixty}s</li>
+                            <li>Velocidad máxima: {car.specs.topSpeed}mph</li>
+                            <li>Transmisión: {car.specs.transmission}</li>
+                            <li>Tren de transmisión: {car.specs.drivetrain}</li>
+                        </ul>
                     </div>
                 </div>
                 <div className="informacion__basica">

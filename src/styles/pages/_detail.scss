@@ -15,24 +15,37 @@
             var(--c3) 0 180deg);
     background-size: var(--s) calc(var(--s) * 0.577);
 
-    .imagen__y__detalles__container {
-        display: flex;
-        align-items: center;
-
-        .detalles__del__motor {
-            margin: 0 0 0 100px;
-        }
-    }
 
     .selected__car__detail__container {
+        .imagen__y__detalles__container {
+            display: flex;
+            align-items: center;
+
+            .detalles__del__motor {
+                margin: 0 0 0 2vw;
+            }
+        }
 
         padding: 30px;
 
         img {
+            // margin: 0 5px 0 0;
             border-radius: 20px;
-            height: 500px;
-            width: 850px;
+            height: 30vw;
+            max-width: 2000px;
+            width: 50vw;
             object-fit: cover;
+        }
+
+        @media (max-width: 400px) {
+            .imagen__y__detalles__container {
+                flex-direction: column;
+                img {
+                    margin: 0 0 20px 0;
+                    width: 80vw;
+                    height: 40vh;
+                }
+            }
         }
     }
 }

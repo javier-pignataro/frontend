@@ -2,22 +2,27 @@
     display: flex;
 
     .left__column {
-        background-image: url("https://cdn.discordapp.com/attachments/862374724154556426/1237934211671785522/rental-cars-image.png?ex=663d7393&is=663c2213&hm=26fde2d502dd3d8decb8314acbda5cb6e1451c51df0275ba37aaf62c1f8769c5&");
+        background-image: url("https://cdn.discordapp.com/attachments/862374724154556426/1237934211671785522/rental-cars-image.png?ex=664210d3&is=6640bf53&hm=e6fbe38a0bbf4a63e79c0a7ae573c32d51b5dc51322bfb9f39df39ab240860e9&");
         // opacity: 20%;
         background-size: cover;
         background-blend-mode: multiply;
         display: flex;
         flex-direction: column;
         width: 30%;
-        height: 96vh;
+        height: 91vh;
         justify-content: center;
         align-items: center;
 
 
         .info {
+            max-width: 500px;
+            width: 80%;
+            max-height: 600px;
+            height: 80vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            text-align: center;
             align-items: center;
             background-color: rgba(255, 255, 255, 0.705);
             color: black;
@@ -25,11 +30,12 @@
             border-radius: 50px;
 
             img {
-                width: 350px;
+                max-width: 350px;
+                width: 20vw;
             }
 
             button {
-                font-size: larger;
+                font-size: 16px;
                 background-color: $darkmode-primary-color;
                 padding: 10px 20px;
                 margin-top: 20px;
@@ -40,6 +46,10 @@
                 &:hover {
                     background-color: $darkmode-accent-color;
                 }
+            }
+
+            .span__primary__color {
+                color: $darkmode-primary-color;
             }
         }
     }
@@ -58,6 +68,88 @@
             flex-wrap: wrap;
             justify-content: space-evenly;
             margin-top: 20px;
+
+            .car__card {
+                width: 25vw;
+            }
+        }
+
+        .search {
+            margin: 30px auto 0 auto;
+            max-width: 501px;
+            // width: 100%;
+            position: relative;
+
+            input[type="text"] {
+                max-width: 500px;
+                width: 30vw;
+                height: 50px;
+                padding: 10px;
+                border: none;
+                border-radius: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            button[type="submit"] {
+                background-color: $darkmode-secondary-color;
+                height: 50px;
+                border: none;
+                color: #fff;
+                cursor: pointer;
+                padding: 10px 20px;
+                border-radius: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                position: absolute;
+                right: 0;
+                transition: .25s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.2);
+                    color: rgb(255, 255, 255);
+                    background-color: $darkmode-primary-color;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1219px) {
+        flex-direction: column;
+
+        .left__column {
+            width: 100%;
+            height: 60vh;
+
+            .info {
+                font-size: 14px;
+                height: 50vh;
+
+                img {
+                    width: 200px;
+                    height: 200px;
+                }
+
+                padding-bottom: 50px;
+            }
+        }
+
+        .right__column {
+            width: 100%;
+
+            .search {
+                input[type="text"] {
+                    width: 80vw;
+                }
+            }
+
+            .container__cars__showcase {
+                .car__card {
+                    width: 45vw;
+                }
+            }
         }
     }
 }
