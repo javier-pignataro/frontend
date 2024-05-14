@@ -20,6 +20,7 @@ const Home = () => {
         car = carsJson[Math.floor(Math.random() * carsJson.length)]
       }
       result.push(car)
+      // console.log("hola");
     }
 
     return result
@@ -29,7 +30,9 @@ const Home = () => {
 
   function fetchCars() {
     axios.get('http://localhost:8080/vehicle/all').then(res => {
-      console.log(res.json());
+      console.log(res.data);
+      setCars(res.data);
+      console.log(cars);
     })
   }
 
@@ -65,7 +68,9 @@ const Home = () => {
         </div>
         <div className='container__cars__showcase'>
           {
-            getRandomCars().map(car => {
+            // getRandomCars().map(car => {
+              cars.map(car => {
+
               return (
                 <Card car={car} key={car.id} className='car__card' />
               )
