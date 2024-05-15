@@ -1,33 +1,34 @@
 import React from 'react'
+import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
-
-import carsJson from '../cars.json'
+import axios from 'axios'
 
 const ImageLibrary = () => {
     const { id } = useParams()
 
-    const getCarSelected = () => {
-        let car = carsJson.find(car => car.id == id);
-        return car;
-    }
-
-    const car = getCarSelected(); // Get the selected car object
+    const [car, setCar] = useState({});
+    useEffect(() => {
+        axios.get(`http://localhost:8080/vehicle/${id}`).then((res) => {
+            setCar(res.data);
+        });
+    }, []);
 
     return (
         <>
-            <Link to={`/cars/${car.id}`}><h3>Volver</h3></Link>
+            <Link to={`/cars/${car.idVehicle}`}><h3>Volver</h3></Link>
             <div className='image__library__container'>
-                {car.images.map(image => {
-                    return (
-                        <img src={image} />
-                    )
-                })}
+                {
+                    car.image?.imageUrls.map((img) => {
+                        if (img == '') return
+                        return <img src={img} alt="car-image" />
+                    })
+                }
             </div>
         </>
     )
 }
 
 
-export default ImageLibrary; 
+export default ImageLibrary;
 
 

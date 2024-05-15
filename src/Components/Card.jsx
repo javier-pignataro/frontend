@@ -1,16 +1,14 @@
 import { Link } from "react-router-dom";
 
 const Card = ({ car }) => {
-    const {idVehicle, id, brand, description, model, image} = car;
-    // console.log(car);
     return (
-        <Link to={`/cars/${idVehicle}`}>
-            <div className='car__card' id={id}>
-                <img src={image.imageUrls[0]} alt={image.idImageList} />
+        <Link to={`/cars/${car.idVehicle}`}>
+            <div className='car__card' id={car.id}>
+                <img src={car.image?.imageUrls[0]} alt={"main-image"} />
                 <div className="card__car__information">
-                    <h4>{brand.name}</h4>
-                    <p>{description.toUpperCase()}</p>
-                    <p>${model.plate} </p>
+                    <h4>{car.brand.name}</h4>
+                    <p>{car.model.name}</p>
+                    <p>${car.price}</p>
                 </div>
             </div>
         </Link>

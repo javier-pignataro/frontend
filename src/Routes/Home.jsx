@@ -7,14 +7,11 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   const [cars, setCars] = useState([]);
-  function fetchCars() {
+
+  useEffect(() => {
     axios.get("http://localhost:8080/vehicle/all").then((res) => {
       setCars(res.data);
     });
-  }
-
-  useEffect(() => {
-    fetchCars();
   }, []);
 
   const onClickButton = () => {
@@ -36,7 +33,6 @@ const Home = () => {
   //   }
   //   return result;
   // };
-
 
   return (
     <div className="container__home">
@@ -61,7 +57,7 @@ const Home = () => {
         </div>
         <div className="container__cars__showcase">
           {cars.map((car) => {
-            return <Card car={car} key={car.idImageList} className="car__card" />;
+            return <Card car={car} key={car.idVehicle} className="car__card" />;
           })}
         </div>
       </div>

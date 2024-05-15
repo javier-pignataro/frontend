@@ -17,13 +17,15 @@
 
 
     .selected__car__detail__container {
-        .imagen__y__detalles__container {
-            display: flex;
-            align-items: center;
+        display: flex;
 
-            .detalles__del__motor {
-                margin: 0 0 0 2vw;
-            }
+        .imagen__y__detalles__container {
+            margin: 0 20px;
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+            text-align: left;
+            justify-content: center;
         }
 
         padding: 30px;
@@ -40,6 +42,7 @@
         @media (max-width: 400px) {
             .imagen__y__detalles__container {
                 flex-direction: column;
+
                 img {
                     margin: 0 0 20px 0;
                     width: 80vw;

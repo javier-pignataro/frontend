@@ -1,23 +1,30 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
-import Card from '../Components/Card'
+import axios from 'axios'
 
-import CarsJson from '../cars.json'
+import Card from '../Components/Card'
 
 const Search = () => {
     const { search } = useParams();
     //? if search is empty, it will be undefined
 
+    const [cars, setCars] = useState([]);
+    useEffect(() => {
+        axios.get("http://localhost:8080/vehicle/all").then((res) => {
+            setCars(res.data);
+        });
+    }, []);
+
     const searchCars = () => {
         let result = [];
 
         if (!search) {
-            return CarsJson;
+            return cars;
         }
 
-        CarsJson.forEach(car => {
-            if (car.brand.toLowerCase().includes(search.toLowerCase()) || car.model.toLowerCase().includes(search.toLowerCase())) {
+        cars.forEach(car => {
+            if (car.brand?.name.toLowerCase().includes(search.toLowerCase()) || car.model?.name.toLowerCase().includes(search.toLowerCase()) || search.toLowerCase() == car.brand?.name.toLowerCase() + " " + car.model?.name.toLowerCase()) {
                 result.push(car);
             }
         });
@@ -25,14 +32,12 @@ const Search = () => {
         return result;
     }
 
-    const searchResults = searchCars();
-
     return (
         <div className="search__container">
             <h2>Resultados de la búsqueda:</h2>
             <div className="search__results">
                 {
-                    searchResults.map(car => {
+                    searchCars().map(car => {
                         return (
                             <Card car={car} />
                         )
