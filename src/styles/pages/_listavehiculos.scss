@@ -1,0 +1,18 @@
+.administracion__lista__vehiculos__container {
+    .lista__de__vehiculos {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        margin: 0 auto;
+        justify-content: space-evenly;
+
+        div {
+            display: flex;
+            flex-direction: column;
+
+            * {
+                margin: 5px 0;
+            }
+        }
+    }
+}

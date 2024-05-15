@@ -19,6 +19,7 @@ const Footer = () => {
             <div className='footer__links__div'>
                 <Link to='/about'>Sobre nosotros</Link>
                 <Link to='/legal'>Legal</Link>
+                <Link to='/administracion'>Administración</Link>
             </div>
             <div className='footer__socials'>
                 <a href="">
