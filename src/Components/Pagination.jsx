@@ -1,12 +1,17 @@
 import React from "react";
 
 const Pagination = ({ nPages, currentPage, setCurrentPage }) => {
+
   const pageNumbers = [...Array(nPages + 1).keys()].slice(1);
 
   const goToNextPage = () => {
+    e.preventDefault(); 
+
     if (currentPage !== nPages) setCurrentPage(currentPage + 1);
   };
   const goToPrevPage = () => {
+    e.preventDefault(); 
+
     if (currentPage !== 1) setCurrentPage(currentPage - 1);
   };
   return (

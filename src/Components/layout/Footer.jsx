@@ -4,7 +4,19 @@ import ArrancArLogo from '../../assets/logo-dark-transparente.png'
 import xLogo from '../../assets/x.png'
 import instagramLogo from '../../assets/instagram.png'
 
+
+
+
 const Footer = () => {
+
+
+ 
+        const showIcons = (e) => {
+                 alert("SITIO EN DESARROLLO")
+                 e.preventDefault(); 
+
+        }
+         
     return (
         <footer>
             <div className='footer__logo__div'>
@@ -22,15 +34,20 @@ const Footer = () => {
                 <Link to='/administracion'>Administración</Link>
             </div>
             <div className='footer__socials'>
-                <a href="">
+
+
+
+
+                
+                <a href="" onClick={showIcons}>
                     <img src={xLogo} alt="" />
                 </a>
-                <a href="">
+                <a href="" onClick={showIcons}>
                     <img src={instagramLogo} alt="" />
                 </a>
-            </div>
+             </div>
         </footer>
     )
 }
 
-export default Footer
+export default Footer;
