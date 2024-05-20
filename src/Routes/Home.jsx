@@ -22,24 +22,11 @@ const Home = () => {
   const currentRecords = cars.slice(indexOfFirstRecord, indexOfLastRecord);
   const nPages = Math.ceil(cars.length / recordsPerPage);
 
-  const onClickButton = () => {
-    const input = document.querySelector("input");
-    const text = input.value;
-    // take user to /search/"text"
+  const onFormSubmit = (e) => {
+    e.preventDefault();
+    const text = e.target[0].value;
     window.location.href = `/search/${text}`;
   };
-
-  // const getRandomCars = () => {
-  //   let result = [];
-  //   for (let i = 0; i < 10; i++) {
-  //     let car = cars[Math.floor(Math.random() * cars.length)];
-  //     while (result.includes(car)) {
-  //       car = cars[Math.floor(Math.random() * cars.length)];
-  //     }
-  //     result.push(car);
-  //   }
-  //   return result;
-  // };
 
   return (
     <>
@@ -49,8 +36,7 @@ const Home = () => {
           <div className="info">
             <img src={ArrancARLogo} alt="" />
             <h1>
-              Bienvenido a Arranc
-              <span className="span__primary__color">AR</span>!
+              Bienvenido a Arranc<span className="span__primary__color">AR</span>!
             </h1>
             <h3>Donde cada viaje empieza.</h3>
             <Link to="/search/">
@@ -59,12 +45,12 @@ const Home = () => {
           </div>
         </div>
         <div className="right__column">
-          <div className="search">
-            <input placeholder="Buscar autos..." type="text"></input>
-            <button type="submit" onClick={onClickButton}>
+          <form className="search" onSubmit={onFormSubmit}>
+            <input placeholder="Buscar autos..." type="text" />
+            <button type="submit">
               Buscar 🔎
             </button>
-          </div>
+          </form>
           <div className="container__cars__showcase">
             {currentRecords.map((car) => {
               return (
