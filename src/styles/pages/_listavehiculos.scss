@@ -1,18 +1,56 @@
 .administracion__lista__vehiculos__container {
-    .lista__de__vehiculos {
-        display: flex;
-        align-items: center;
-        width: 50%;
-        margin: 0 auto;
-        justify-content: space-evenly;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
 
-        div {
-            display: flex;
-            flex-direction: column;
+.title__admin {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  font-size: $font-size-4;
+  color: $lightmode-background-color-darker;
+}
 
-            * {
-                margin: 5px 0;
-            }
-        }
-    }
+.content-history {
+  max-width: 1200px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  background-color: #141414;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  width: 90%;
+  margin-right: 86px;
+  padding-right: 20px;
+}
+.content-history > h3 {
+  transform: translate(0, 25px);
+  color: $lightmode-background-color-darker;
+}
+.history-list {
+  max-width: 1200px;
+  margin: 10px auto;
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: $darkmode-background-color-lighter;
+  color: $lightmode-background-color-darker;
+  width: 100%;
+}
+.img-history {
+  height: 55px;
+}
+
+.container__buttons {
+  width: 40px;
+  display: flex;
+  justify-content: space-around;
+  transform: translateX(60px);
 }
