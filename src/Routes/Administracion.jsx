@@ -124,6 +124,10 @@ const Administracion = () => {
                     <button>Ver lista de vehículos</button>
                 </Link>
             </div>
+            <div className="phone__error">
+                <h1>No se puede ingresar con un teléfono móvil</h1>
+                <h2>Por favor, vuelva a intentar desde una computadora.</h2>
+            </div>
         </div>
     )
 }
