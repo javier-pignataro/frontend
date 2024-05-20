@@ -9,8 +9,10 @@ import ImageGallery from "./Routes/ImageLibrary"
 import Search from "./Routes/Search"
 import Administracion from "./Routes/Administracion"
 import ListaVehiculos from "./Routes/ListaVehiculos"
-
+import Login from "./Routes/Login";
 import './styles/styles.scss'
+ 
+
 
 function App() {
   return (
@@ -26,6 +28,7 @@ function App() {
             <Route path="/search/:search?" element={<Search />} />
             <Route path="/administracion" element={<Administracion />} />
             <Route path="/administracion/listavehiculos" element={<ListaVehiculos />} />
+            <Route path="/login" element={<Login/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
