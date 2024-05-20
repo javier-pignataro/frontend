@@ -1,15 +1,16 @@
 .administracion__container {
-    height: 75vh;
+    height: 65vh;
 
     .administracion__botones {
-        margin: 50px auto;
+        margin: 10px auto;
         display: flex;
-        height: 500px;
-        width: 400px;
-        flex-direction: column;
+        height: 300px;
+         flex-direction: row;
         justify-content: center;
         align-items: center;
-        background-color: white;
+ 
+        
+
 
         .administracion__error {
             color: red;
@@ -20,8 +21,10 @@
             font-size: 16px;
             background-color: $darkmode-primary-color;
             padding: 10px 20px;
-            margin-top: 20px;
+            margin-top: 10px;
+            border: none;
             border-radius: 15px;
+            margin: 15px;
             cursor: pointer;
             transition: background-color 100ms ease-in-out;
 

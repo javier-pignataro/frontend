@@ -51,7 +51,7 @@ const Administracion = () => {
         const price = e.target[5].value
         const year = e.target[6].value
         const imagenes = [e.target[7].value, e.target[8].value, e.target[9].value, e.target[10].value, e.target[11].value]
-        console.log(patente, descripcion, modelo, tipo, marca, imagenes)
+        // console.log(patente, descripcion, modelo, tipo, marca, imagenes)
         if (!patente || !descripcion || !modelo || !tipo || !marca || !imagenes[0] || !price || !year) {
             errorHandling("Por favor, complete todos los campos.")
             return
@@ -93,7 +93,7 @@ const Administracion = () => {
 
     return (
         <div className="administracion__container">
-            <h2>Panel de Administración</h2>
+            <h2 className="title__admin">Administración</h2>
             <div className="administracion__botones">
                 <button onClick={pressButton}>Agregar Vehículo</button>
                 {
