@@ -4,6 +4,7 @@ import Card from "../Components/Card";
 import ArrancARLogo from "../assets/logo-light-transparente.png";
 import { Link } from "react-router-dom";
 import Pagination from "../Components/Pagination";
+import backgroundImage from "../assets/rental-cars-image.png"
 
 const Home = () => {
   const [cars, setCars] = useState([]);
@@ -44,6 +45,7 @@ const Home = () => {
     <>
       <div className="container__home">
         <div className="left__column">
+          <img src={backgroundImage} alt="" className="background__image" />
           <div className="info">
             <img src={ArrancARLogo} alt="" />
             <h1>
