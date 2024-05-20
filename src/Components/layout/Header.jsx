@@ -7,7 +7,7 @@ const Header = () => {
         <nav>
             <Link to='/'><img src={logoConTitulo} /></Link>
             <div className='navbar__buttons'>
-                <Link><button>Crear Cuenta</button></Link>
+                <Link to='/register'><button>Crear Cuenta</button></Link>
                 <Link to='/login'><button>Iniciar Sesión</button></Link>
             </div>
         </nav>

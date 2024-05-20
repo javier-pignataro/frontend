@@ -40,7 +40,7 @@ const Login = () => {
            <div className="card ">         
             <p className="title-form">Iniciar sesión</p>
           <div className="inputContainer">
-          <input value={correo} placeholder="Ingrese su Email" name="correo" type="text"
+          <input value={correo} placeholder="Ingrese su email" name="correo" type="text"
             onChange={(e) => setUser({ ...user, correo: e.target.value })}/>
         </div>
         <div className="inputContainer">
@@ -56,11 +56,9 @@ const Login = () => {
           </button>
           <ToastContainer />
         </div>
-          {error && 
-          <h3 className={error ? "visible error" : "error"}>
+          {error && <h3 className={error ? "visible error" : "error"}>
               Por favor, verifique los campos ingresados
-          </h3>}
-          
+                  </h3>}
         </form>
     </div>
   );

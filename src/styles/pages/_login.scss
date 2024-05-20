@@ -105,11 +105,20 @@
   }
 }
 
-.recordar__usuario {
+.recordar__usuario,
+.terminos__condiciones {
   display: flex;
   flex-direction: row;
-  width: 50%;
   justify-content: center;
   margin: 0 auto;
   align-items: center;
+  font-size: 12px;
+}
+
+.recordar__usuario {
+  width: 50%;
+}
+
+.terminos__condiciones {
+  width: 80%;
 }
