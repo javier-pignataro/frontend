@@ -24,6 +24,7 @@ const Administracion = () => {
   const [error, setError] = useState("");
   const [images, setImages] = useState([]);
   console.log(images);
+  
   const changeUploadImage = async (e) => {
     const file = e.target.files[0];
     const data = new FormData();
@@ -38,6 +39,7 @@ const Administracion = () => {
 
     setImages([...images, response.data.secure_url]);
   };
+
 
   function errorHandling(string) {
     if (!string) {
@@ -97,7 +99,6 @@ const Administracion = () => {
     });
     postVehiculo(postJson);
   }
-
   return (
     <div className="administracion__container">
       <h2 className="title__admin">Administración</h2>

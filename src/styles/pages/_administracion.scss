@@ -1,37 +1,63 @@
 .administracion__container {
-    height: 65vh;
+    .title__admin {
+        width: fit-content;
+        margin: 0 auto;
+    }
 
-    .administracion__botones {
-        margin: 10px auto;
+    button {
+        font-size: 16px;
+        background-color: $darkmode-primary-color;
+        padding: 10px 20px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 15px;
+        margin: 15px;
+        cursor: pointer;
+        transition: background-color 100ms ease-in-out;
+
+        &:hover {
+            background-color: $darkmode-accent-color;
+        }
+    }
+
+    .administracion__funciones {
+        margin: auto auto;
         display: flex;
-        height: 300px;
-         flex-direction: row;
+        height: fit-content;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
- 
-        
 
+        .botones {
+            display: flex;
+
+        }
 
         .administracion__error {
             color: red;
+            padding: 5px;
+            margin: 10px;
             background-color: rgb(54, 54, 54);
         }
 
-        button {
-            font-size: 16px;
-            background-color: $darkmode-primary-color;
-            padding: 10px 20px;
-            margin-top: 10px;
-            border: none;
+        .administracion__form__agregar__veh {
+            background-color: $darkmode-background-color-lighter;
+            padding: 15px;
             border-radius: 15px;
-            margin: 15px;
-            cursor: pointer;
-            transition: background-color 100ms ease-in-out;
+            display: flex;
+            flex-direction: column;
 
-            &:hover {
-                background-color: $darkmode-accent-color;
+            input {
+                font-size: 16px;
+                padding: 5px;
+                margin: 10px;
+                border: none;
+                border-radius: 5px;
+                background-color: $darkmode-background-color-lighter;
+                color: $darkmode-text-color;
             }
         }
+
     }
 
     .phone__error {
@@ -47,9 +73,8 @@
         }
     }
 
-    @media (max-width: 768px){
-        // hide everything, show error
-        .administracion__botones {
+    @media (max-width: 768px) {
+        .administracion__funciones {
             display: none;
         }
 

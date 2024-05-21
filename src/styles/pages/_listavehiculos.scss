@@ -1,57 +1,87 @@
-.administracion__lista__vehiculos__container {
+.lista__vehiculos__container {
   display: flex;
-  align-items: center;
-  margin: 0 auto;
-  justify-content: space-evenly;
   flex-direction: column;
-}
 
-.title__admin {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  padding-top: 20px;
-  font-size: $font-size-4;
-  color: $lightmode-background-color-darker;
-}
+  .title__admin {
+    width: fit-content;
+    margin: 0 auto;
+  }
 
-.content-history {
-  max-width: 1200px;
-  height: 110px;
-  display: flex;
-  align-items: center;
-  background-color: #141414;
-  flex-direction: row;
-  justify-content: space-evenly;
-  margin: 0 auto;
-  width: 90%;
-  margin-right: 86px;
-  padding-right: 20px;
-}
-.content-history > h3 {
-  transform: translate(0, 25px);
-  color: $lightmode-background-color-darker;
-}
-.history-list {
-  max-width: 1200px;
-  margin: 10px auto;
-  height: 90px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: $darkmode-background-color-lighter;
-  color: $lightmode-background-color-darker;
-  width: 100%;
-}
-.img-history {
-  height: 60px;
-  width: 60px;
-}
+  .titulos__categorias {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
 
-.container__buttons {
-  width: 40px;
-  display: flex;
-  justify-content: space-around;
-  transform: translateX(60px);
+    * {
+      width: calc(100%/6);
+      text-align: center;
+    }
+  }
+
+  .lista__vehiculos__container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    background-color: $darkmode-background-color-lighter;
+    border-radius: 5px;
+    overflow: hidden;
+
+    img {
+      border-radius: 5px;
+      height: calc(1vw*5);
+      object-fit: cover;
+    }
+
+    * {
+      width: calc(100%/6);
+      text-align: center;
+    }
+
+    .container__buttons {
+      display: flex;
+      justify-content: space-evenly;
+
+      button {
+        background: $darkmode-secondary-color;
+        border: none;
+        border-radius: 5px;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+
+        img {
+          height: 40%;
+          width: 40%;
+        }
+      }
+    }
+  }
+
+  .phone__error {
+    display: none;
+    margin: 50px auto;
+    padding: 0 50px;
+    width: fit-content;
+    color: red;
+    background-color: rgb(54, 54, 54);
+
+    * {
+      padding: 10px 0px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .lista__vehiculos__container {
+      display: none;
+    }
+
+    .phone__error {
+      display: block;
+    }
+  }
 }

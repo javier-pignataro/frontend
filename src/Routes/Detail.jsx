@@ -2,17 +2,16 @@ import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom'
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from "axios";
-
+import utils from "../functions/utils.js";
 
 const Detail = () => {
     const { id } = useParams();
 
     const [car, setCar] = useState({});
-    console.log(car)
     useEffect(() => {
         axios.get(`http://localhost:8080/vehicle/${id}`).then((res) => {
             setCar(res.data);
-         });
+        });
     }, []);
 
     return (
@@ -24,7 +23,7 @@ const Detail = () => {
                     <h2>{car.brand?.name}</h2>
                     <h3>{car.model?.name}</h3>
                     <p>{car.description}</p>
-                    <p>{car.price}</p>
+                    <p>${utils.convertirPrecioIntAPesosStr(car.price)} ARS</p>
                     <p>{car.reserved ? "Reservado" : "Disponible"}</p>
                     <Link to={`/cars/${id}/images`}>Ver más imágenes</Link>
                 </div>

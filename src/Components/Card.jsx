@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import utils from '../functions/utils.js'
 
 const Card = ({ car }) => {
     console.log(car.imgUrls[0].url);
@@ -9,7 +10,7 @@ const Card = ({ car }) => {
                 <div className="card__car__information">
                     <h4>{car.brand.name}</h4>
                     <p>{car.model.name}</p>
-                    <p>${car.price}</p>
+                    <p>${utils.convertirPrecioIntAPesosStr(car.price)} ARS</p>
                 </div>
             </div>
         </Link>

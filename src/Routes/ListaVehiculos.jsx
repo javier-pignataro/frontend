@@ -1,8 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTrashCan, faPen } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
+import trashCan from "../assets/trash-solid.svg"
+import pencil from "../assets/pencil-solid.svg"
 
 const ListaVehiculos = () => {
   function deleteVehiculo(id) {
@@ -26,41 +26,41 @@ const ListaVehiculos = () => {
   }, []);
 
   return (
-    <>
+    <div className="lista__vehiculos__container">
       <h2 className="title__admin">Administración</h2>
-      <div className="content-history">
+      <div className="phone__error">
+        <h1>No se puede ingresar con un teléfono móvil</h1>
+        <h2>Por favor, vuelva a intentar desde una computadora.</h2>
+      </div>
+      <div className="titulos__categorias">
         <h3>Image</h3>
-        <h3>Id</h3>
+        <h3>ID</h3>
         <h3>Marca</h3>
         <h3>Modelo</h3>
         <h3>Tipo</h3>
-        <h3></h3>
+        <h3>Acción</h3>
       </div>
-
       {cars.map((car) => {
 
         return (
-          <div className="administracion__lista__vehiculos__container ">
-            <div className="history-list">
-   
-              <img className="img-history" src={car.imgUrls[0].url} alt="" /> 
-                <h4>{car.idVehicle}</h4>
-              <p>{car.description}</p>
-              <h4>{car.brand.name}</h4>
-              <h4>{car.type.name}</h4>
+          <div className="lista__vehiculos__container">
+            <img className="img-history" src={car.imgUrls?.[0].url} alt="" />
+            <h4>{car.idVehicle}</h4>
+            <h4>{car.brand.name}</h4>
+            <p>{car.model.name}</p>
+            <h4>{car.type.name}</h4>
             <div className="container__buttons">
               <button onClick={() => deleteVehiculo(car.idVehicle)}>
-                <FontAwesomeIcon icon={faTrashCan} />
+                <img src={trashCan} />
               </button>
               <button onClick={() => alert("Sitio en desarrollo")}>
-                <FontAwesomeIcon icon={faPen} />
+                <img src={pencil} />
               </button>
-            </div>
             </div>
           </div>
         );
       })}
-    </>
+    </div>
   );
 };
 
