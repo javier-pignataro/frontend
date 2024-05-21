@@ -58,8 +58,7 @@ const Home = () => {
               );
             })}
           </div>
-          <Pagination nPages={nPages} currentPage={currentPage} setCurrentPage={setCurrentPage}
-          />
+          <Pagination nPages={nPages} currentPage={currentPage} setCurrentPage={setCurrentPage} />
         </div>
       </div>
     </>

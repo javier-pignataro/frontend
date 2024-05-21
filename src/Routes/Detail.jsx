@@ -19,7 +19,7 @@ const Detail = () => {
         <div className="detail__container">
             <h2>Vehículo seleccionado:</h2>
             <div className='selected__car__detail__container'>
-                <img src={car.image?.imageUrls[0]} />
+                <img src={car.imgUrls[0].url} />
                 <div className='imagen__y__detalles__container'>
                     <h2>{car.brand?.name}</h2>
                     <h3>{car.model?.name}</h3>

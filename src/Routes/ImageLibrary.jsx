@@ -18,9 +18,9 @@ const ImageLibrary = () => {
             <Link to={`/cars/${car.idVehicle}`}><h3>Volver</h3></Link>
             <div className='image__library__container'>
                 {
-                    car.image?.imageUrls.map((img) => {
+                    car.imgUrls?.map((img) => {
                         if (img == '') return
-                        return <img src={img} alt="car-image" />
+                        return <img src={img.url} alt="car-image" />
                     })
                 }
             </div>

@@ -1,16 +1,35 @@
 .administracion__container {
     height: 65vh;
 
-    .administracion__botones {
+    .administracion__funciones {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        margin: 0 auto;
+
+        .administracion__form__agregar__veh {
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+            margin: 0 auto;
+            position: absolue;
+            z-index: 1;
+
+            input {
+                width: 500px;
+            }
+
+            .agregar__veh__buttons {
+                display: flex;
+            }
+        }
+
         margin: 10px auto;
         display: flex;
         height: 300px;
-         flex-direction: row;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
- 
-        
-
 
         .administracion__error {
             color: red;
@@ -40,16 +59,17 @@
         padding: 0 50px;
         width: fit-content;
         color: red;
+        text-align: center;
         background-color: rgb(54, 54, 54);
 
-        * {
+        h1,
+        h2 {
             padding: 10px 0px;
         }
     }
 
-    @media (max-width: 768px){
-        // hide everything, show error
-        .administracion__botones {
+    @media (max-width: 768px) {
+        .administracion__funciones {
             display: none;
         }
 
