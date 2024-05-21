@@ -98,37 +98,35 @@ const Administracion = () => {
                 <h2>Por favor, vuelva a intentar desde una computadora.</h2>
             </div>
             <div className="administracion__funciones">
-                <button onClick={pressButton}>Agregar Vehículo</button>
-                <Link to='/administracion/listavehiculos'>
-                    <button>Ver lista de vehículos</button>
-                </Link>
-                {
-                    error && (
-                        <p className='administracion__error'>{error}</p>
-                    )
-                }
-                {
-                    pressedButton && (
-                        <form onSubmit={submitForm} className='administracion__form__agregar__veh'>
-                            <input type="text" placeholder="Marca" />
-                            <input type="text" placeholder="Modelo" />
-                            <input type="text" placeholder="Año" />
-                            <input type="text" placeholder="Tipo" />
-                            <input type="text" placeholder="Patente" />
-                            <input type="text" placeholder="Descripción" />
-                            <input type="text" placeholder="Precio" />
-                            <input type="text" placeholder="Imagen #1" />
-                            <input type="text" placeholder="Imagen #2" />
-                            <input type="text" placeholder="Imagen #3" />
-                            <input type="text" placeholder="Imagen #4" />
-                            <input type="text" placeholder="Imagen #5" />
-                            <div className='agregar__veh__buttons'>
-                                <button type="submit" className='administracion__submit__button'>Agregar</button>
-                                <button onClick={pressButton}>Cancelar</button>
-                            </div>
-                        </form>
-                    )
-                }
+                <div className="botones">
+                    <button onClick={pressButton}>Agregar Vehículo</button>
+                    <Link to='/administracion/listavehiculos'>
+                        <button>Ver lista de vehículos</button>
+                    </Link>
+                </div>
+                {error && (
+                    <p className='administracion__error'>{error}</p>
+                )}
+                {pressedButton && (
+                    <form onSubmit={submitForm} className='administracion__form__agregar__veh'>
+                        <input type="text" placeholder="Marca" />
+                        <input type="text" placeholder="Modelo" />
+                        <input type="text" placeholder="Año" />
+                        <input type="text" placeholder="Tipo" />
+                        <input type="text" placeholder="Patente" />
+                        <input type="text" placeholder="Descripción" />
+                        <input type="text" placeholder="Precio" />
+                        <input type="text" placeholder="Imagen #1" />
+                        <input type="text" placeholder="Imagen #2" />
+                        <input type="text" placeholder="Imagen #3" />
+                        <input type="text" placeholder="Imagen #4" />
+                        <input type="text" placeholder="Imagen #5" />
+                        <div className='agregar__veh__buttons'>
+                            <button type="submit" className='administracion__submit__button'>Agregar</button>
+                            <button onClick={pressButton}>Cancelar</button>
+                        </div>
+                    </form>
+                )}
             </div>
         </div>
     )

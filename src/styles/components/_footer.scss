@@ -1,38 +1,23 @@
 footer {
-  align-items: center;
-  background: $darkmode-background-color-lighter;
-  color: $darkmode-text-color;
   display: flex;
-  height: 90px;
   justify-content: space-between;
+  align-items: center;
+  color: $darkmode-text-color;
+  height: 90px;
   margin: 20px 0 0 0;
   padding: 0 20px;
   width: 100%;
+  background: $darkmode-background-color-lighter;
 
   .footer__logo__div {
     align-items: center;
     display: flex;
     flex-direction: row;
 
-    &:nth-child(1) {
-      align-items: center;
-      display: flex;
-    }
-
     img {
       margin: 0 10px 0 0;
       width: 65px;
     }
-  }
-
-  p {
-    font-size: $font-size-0;
-    margin: 0;
-    padding-right: 12px;
-  }
-
-  div {
-    display: flex;
   }
 
   .footer__links__div {
