@@ -55,9 +55,10 @@ const Administracion = () => {
 
 
   const [pressedButton, setPressedButton] = useState(false);
-  function pressButton() {
+  function pressButton() { //? reiniciar todos los campos al presionar "cancelar"/"agregar vehiculo"
     setPressedButton(!pressedButton);
     setError(false);
+    setImages([])
   }
 
   function submitForm(e) {
@@ -119,19 +120,43 @@ const Administracion = () => {
         {success && <p className="administracion__success">Vehículo agregado con éxito.</p>}
         {pressedButton && (
           <form onSubmit={submitForm} className="administracion__form__agregar__veh">
-            <input type="text" placeholder="Marca" />
-            <input type="text" placeholder="Modelo" />
-            <input type="text" placeholder="Tipo" />
-            <input type="text" placeholder="Año" />
-            <input type="text" placeholder="Precio" />
-            <input type="text" placeholder="Patente" />
-            <input type="text" placeholder="Descripción" />
-            <input type="file" accept="image/*" onChange={changeUploadImage} />
+            <div>
+              <p>Marca:</p>
+              <input type="text" placeholder="BMW" />
+            </div>
+            <div>
+              <p>Modelo:</p>
+              <input type="text" placeholder="328i" />
+            </div>
+            <div>
+              <p>Tipo:</p>
+              <input type="text" placeholder="Coupé" />
+            </div>
+            <div>
+              <p>Año:</p>
+              <input type="text" placeholder="1997" />
+            </div>
+            <div>
+              <p>Precio:</p>
+              <input type="text" placeholder="30000" />
+            </div>
+            <div>
+              <p>Patente:</p>
+              <input type="text" placeholder="RNV761" />
+            </div>
+            <div>
+              <p>Descripción:</p>
+              <input type="text" placeholder="Vehículo premium, clásico. En perfecto estado, sin detalles." />
+            </div>
+            <div>
+              <p>Imágenes:</p>
+              <input type="file" accept="image/*" onChange={changeUploadImage} />
+            </div>
             <div className="imagenes__subidas">
               {images.map((imageUrl, index) => (
                 <div key={index}>
                   <a href={imageUrl} target="_blank"><img src={imageUrl} alt={`Imagen ${index + 1}`} /></a>
-                  <button onClick={() => setImages(images.filter((_, i) => i !== index))}>Eliminar</button>
+                  <button type="button" onClick={() => setImages(images.filter((_, i) => i !== index))}>Eliminar</button>
                 </div>
               ))}
             </div>
