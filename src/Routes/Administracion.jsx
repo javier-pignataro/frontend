@@ -51,7 +51,7 @@ const Administracion = () => {
         const price = e.target[5].value
         const year = e.target[6].value
         const imagenes = [e.target[7].value, e.target[8].value, e.target[9].value, e.target[10].value, e.target[11].value]
-        // console.log(patente, descripcion, modelo, tipo, marca, imagenes)
+        console.log(patente, descripcion, modelo, tipo, marca, imagenes)
         if (!patente || !descripcion || !modelo || !tipo || !marca || !imagenes[0] || !price || !year) {
             errorHandling("Por favor, complete todos los campos.")
             return
@@ -76,14 +76,14 @@ const Administracion = () => {
             // "year": year, //! sera definido mas adelante
             "brand": {
                 "name": marca,
+                "imgUrl": imgUrl
             },
-            "image": {
-                "imageUrls": []
-            }
+
+                "imgUrls": []
         }
         imagenes.forEach(
             imagen => {
-                postJson.image.imageUrls.push(imagen)
+                postJson.imgUrls.push(imagen)
             }
         )
         postVehiculo(

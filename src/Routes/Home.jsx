@@ -10,6 +10,7 @@ const Home = () => {
   const [cars, setCars] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [recordsPerPage] = useState(4);
+  console.log(cars)
 
   useEffect(() => {
     axios.get("http://localhost:8080/vehicle/all").then((res) => {

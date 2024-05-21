@@ -2,12 +2,18 @@
     padding: 30px;
     display: flex;
     flex-wrap: wrap;
-
-    img {
+    flex-direction: row;
+    background-color: $darkmode-background-color-lighter;
+    width: 80%;
+    justify-content: scenter;
+    margin: 0 auto;
+    .image {
         width: 80vw;
-        max-width: 600px;
+        width: 350px;
         height: 350px;
         object-fit: cover;
+        padding: 7px;
+        margin: 0 auto;
 
     }
 }
