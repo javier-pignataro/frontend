@@ -57,6 +57,7 @@ const Administracion = () => {
   const [pressedButton, setPressedButton] = useState(false);
   function pressButton() {
     setPressedButton(!pressedButton);
+    setError(false);
   }
 
   function submitForm(e) {
@@ -134,7 +135,10 @@ const Administracion = () => {
                 </div>
               ))}
             </div>
-            <button type="submit" className="administracion__submit__button">Agregar</button>
+            <div className="botones__form">
+              <button type="submit" className="administracion__submit__button">Agregar</button>
+              <button type="button" onClick={pressButton}>Cancelar</button>
+            </div>
           </form>
         )}
       </div>

@@ -96,6 +96,15 @@
                     }
                 }
             }
+
+            .botones__form {
+                display: flex;
+                justify-content: space-evenly;
+
+                button {
+                    width: 40%;
+                }
+            }
         }
     }
 
