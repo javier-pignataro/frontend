@@ -5,8 +5,10 @@ import axios from 'axios'
 
 const ImageLibrary = () => {
     const { id } = useParams()
-
-    const [car, setCar] = useState({});
+    
+    const [car, setCar] = useState({});  
+    console.log(car);
+  
     useEffect(() => {
         axios.get(`http://localhost:8080/vehicle/${id}`).then((res) => {
             setCar(res.data);

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import utils from '../functions/utils.js'
 
 const Card = ({ car }) => {
+    console.log(car.imgUrls[0].url);
     return (
         <Link to={`/cars/${car.idVehicle}`}>
             <div className='car__card' id={car.id}>
