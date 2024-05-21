@@ -18,13 +18,15 @@ const Administracion = () => {
       .catch((error) => {
         console.log(error);
         setError("Esta patente ya está registrada en el sistema.");
+        setSuccess(false);
       });
   }
 
   const [error, setError] = useState("");
+  const [success, setSuccess] = useState(false);
   const [images, setImages] = useState([]);
   console.log(images);
-  
+
   const changeUploadImage = async (e) => {
     const file = e.target.files[0];
     const data = new FormData();
@@ -48,7 +50,9 @@ const Administracion = () => {
     }
     let result = "Error al enviar al formulario: " + string;
     setError(result);
+    setSuccess(false);
   }
+
 
   const [pressedButton, setPressedButton] = useState(false);
   function pressButton() {
@@ -57,13 +61,13 @@ const Administracion = () => {
 
   function submitForm(e) {
     e.preventDefault();
-    const patente = e.target[0].value.toUpperCase();
-    const descripcion = e.target[1].value;
-    const modelo = e.target[2].value;
-    const tipo = e.target[3].value;
-    const marca = e.target[4].value;
-    const price = e.target[5].value;
-    const year = e.target[6].value;
+    const marca = e.target[0].value;
+    const modelo = e.target[1].value;
+    const tipo = e.target[2].value;
+    const year = e.target[3].value;
+    const price = e.target[4].value;
+    const patente = e.target[5].value.toUpperCase();
+    const descripcion = e.target[6].value;
     // const imagenes = [e.target[7].value, e.target[8].value, e.target[9].value, e.target[10].value, e.target[11].value]
     // console.log(patente, descripcion, modelo, tipo, marca, imagenes)
     if (!patente || !descripcion || !modelo || !tipo || !marca || !price || !year) {
@@ -90,7 +94,7 @@ const Administracion = () => {
       // "year": year, //! sera definido mas adelante
       brand: {
         name: marca,
-       },
+      },
       imgUrls: [],
     };
     // imagenes.forEach(
@@ -98,50 +102,41 @@ const Administracion = () => {
       postJson.imgUrls.push(imagen);
     });
     postVehiculo(postJson);
+    setSuccess(true);
   }
   return (
     <div className="administracion__container">
       <h2 className="title__admin">Administración</h2>
-      <div className="administracion__botones">
-        <button onClick={pressButton}>Agregar Vehículo</button>
+      <div className="administracion__funciones">
+        <div className="botones">
+          <button onClick={pressButton}>Agregar Vehículo</button>
+          <Link to="/administracion/listavehiculos">
+            <button>Ver lista de vehículos</button>
+          </Link>
+        </div>
         {error && <p className="administracion__error">{error}</p>}
+        {success && <p className="administracion__success">Vehículo agregado con éxito.</p>}
         {pressedButton && (
-          <form onSubmit={submitForm}>
-            <input type="text" placeholder="Patente" />
-            <input type="text" placeholder="Descripción" />
+          <form onSubmit={submitForm} className="administracion__form__agregar__veh">
+            <input type="text" placeholder="Marca" />
             <input type="text" placeholder="Modelo" />
             <input type="text" placeholder="Tipo" />
-            <input type="text" placeholder="Marca" />
-            <input type="text" placeholder="Precio" />
             <input type="text" placeholder="Año" />
+            <input type="text" placeholder="Precio" />
+            <input type="text" placeholder="Patente" />
+            <input type="text" placeholder="Descripción" />
             <input type="file" accept="image/*" onChange={changeUploadImage} />
-            <div>
+            <div className="imagenes__subidas">
               {images.map((imageUrl, index) => (
                 <div key={index}>
-                  <img
-                    src={imageUrl}
-                    alt={`Imagen ${index + 1}`}
-                    style={{ width: "80px", height: "80px" }}
-                  />
-                  <button
-                    onClick={() =>
-                      setImages(images.filter((_, i) => i !== index))
-                    }
-                  >
-                    Eliminar Imagen
-                  </button>
+                  <a href={imageUrl} target="_blank"><img src={imageUrl} alt={`Imagen ${index + 1}`} /></a>
+                  <button onClick={() => setImages(images.filter((_, i) => i !== index))}>Eliminar</button>
                 </div>
               ))}
             </div>
-
-            <button type="submit" className="administracion__submit__button">
-              Agregar
-            </button>
+            <button type="submit" className="administracion__submit__button">Agregar</button>
           </form>
         )}
-        <Link to="/administracion/listavehiculos">
-          <button>Ver lista de vehículos</button>
-        </Link>
       </div>
       <div className="phone__error">
         <h1>No se puede ingresar con un teléfono móvil</h1>

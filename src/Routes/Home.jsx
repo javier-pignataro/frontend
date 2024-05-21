@@ -9,7 +9,7 @@ import backgroundImage from "../assets/rental-cars-image.png"
 const Home = () => {
   const [cars, setCars] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [recordsPerPage] = useState(4);
+  const [recordsPerPage] = useState(6);
   console.log(cars)
 
   useEffect(() => {

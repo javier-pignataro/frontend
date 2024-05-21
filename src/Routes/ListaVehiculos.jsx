@@ -18,7 +18,7 @@ const ListaVehiculos = () => {
 
   const [cars, setCars] = useState([]);
   console.log(cars);
-  const{imgUrls} = cars;
+  const { imgUrls } = cars;
   useEffect(() => {
     axios.get("http://localhost:8080/vehicle/all").then((res) => {
       setCars(res.data);
@@ -41,10 +41,9 @@ const ListaVehiculos = () => {
         <h3>Acción</h3>
       </div>
       {cars.map((car) => {
-
         return (
-          <div className="lista__vehiculos__container">
-            <img className="img-history" src={car.imgUrls?.[0].url} alt="" />
+          <div className="vehiculo__container">
+            <img className="img-history" src={car.imgUrls?.[0]?.url} alt="" />
             <h4>{car.idVehicle}</h4>
             <h4>{car.brand.name}</h4>
             <p>{car.model.name}</p>
