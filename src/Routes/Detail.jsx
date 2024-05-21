@@ -12,8 +12,7 @@ const Detail = () => {
     useEffect(() => {
         axios.get(`http://localhost:8080/vehicle/${id}`).then((res) => {
             setCar(res.data);
-            console.log(car.imgUrls[0].url);
-        });
+         });
     }, []);
 
     return (
