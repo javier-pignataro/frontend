@@ -23,7 +23,7 @@
     display: flex;
     flex-direction: row;
     width: 80%;
-    margin: 0 auto;
+    margin: 10px auto;
     text-align: center;
     align-items: center;
     padding: 10px;
@@ -32,7 +32,8 @@
     overflow: hidden;
 
     img {
-      height: 80px;
+      border-radius: 5px;
+      height: calc(1vw*5);
       object-fit: cover;
     }
 

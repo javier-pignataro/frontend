@@ -41,7 +41,7 @@ const ListaVehiculos = () => {
       </div>
       {cars.map((car) => {
         return (
-          <div className="lista__vehiculos__container ">
+          <div className="lista__vehiculos__container">
             <img className="img-history" src={car.imgUrls?.[0].url} alt="" />
             <h4>{car.idVehicle}</h4>
             <h4>{car.brand.name}</h4>
